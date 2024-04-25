@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
+
+:root{
+    --fundo: #222c58;
+    --placeholder: #9e9e9e;
+    --fieldset: #353e7e;
+    --selected: #48498f;
+}
+
+body {
+    background-color: var(--fundo);
+    padding-top: 60px;
+}
+
+main {
+    max-width: 800px;
+    margin: auto;
+    background-color: rgb(255, 255, 255);
+    padding: 50px;
+    border-radius: 25px;
+}
+
+h1 {
+    text-align: center;
+    font-family: 'nunito sans';
+    font-weight: 700;
+    font-size: 35px;
+    color: var(--fundo);
+}
+
+h1 > p {
+    font-size: 17px;
+    color: #686868;
+}
+
+
+/*===============INPUT=============*/
+fieldset {
+    background-color: rgb(255, 255, 255);
+    margin: 40px 0px;
+    padding: 20px;
+    border-radius: 0px;
+    border-style: solid;
+    border-radius: 10px;
+    border-color: var(--fieldset);
+    font-family: 'source sans 3';
+    font-weight: bold;
+    display: flex;
+}
+
+section {
+    background-color: rgb(255, 255, 255);
+    width: 50%;
+}
+
+.box-input {
+    position: relative;
+    width: 100%;
+}
+
+input {
+    border: 0;
+    border-bottom: 1px;
+    border-style: solid;
+    border-color: rgb(49, 35, 99);
+    background-color: rgb(255, 255, 255);
+    font-family: 'source sans 3';
+    padding: 5px;
+    outline: 0;
+    width: 90%;
+}
+
+label {
+    transition: all 0.4s ease;
+    font-size: 15px;
+    font-family: 'source sans 3';
+    font-weight: 400;
+    position: absolute;
+    left: 0;
+    bottom: 5px;
+    color: var(--placeholder);
+}
+
+input:focus ~ label, 
+input:valid ~ label{
+    transform: translateY(-23px);
+    font-size: 11px;
+    color: black;
+}
+
+/*----------INPUTS ESPECIAIS(start)----------*/
+    label.special{
+        transform: translateY(-25px);
+        margin-bottom: 5px;
+    }
+
+    input[type="date"] {
+        background-color: var(--fundo);
+        width: 60%;
+        border-radius: 5px;
+        color: white;
+        text-align: center;
+        font-family: 'nunito sans';
+        cursor: pointer;
+    }
+
+    input[type="date"]:focus,
+    select:focus {
+        background-color: var(--selected);
+        color: white;
+        transition: all 0.4s ease;
+        cursor: pointer;
+    }
+
+    ::-webkit-calendar-picker-indicator {
+        background-color: white;
+        border-radius: 5px;
+    }
+
+    select {
+        -webkit-appearence:none;
+        -moz-appearance: none;
+        appearance: none;
+        outline: 0;
+        background-color: #222c58;
+        font-family: 'nunito sans';
+        color: white;
+        padding: 7px;
+        border-style: none;
+        border-radius: 5px;
+        cursor: pointer;
+        letter-spacing: 1px;
+        padding-right: 50px;
+        background-image: url('Icones/icons8-down-button-64.png');
+        background-repeat: no-repeat;
+        background-size: 25px;
+        background-position: 90px;
+    }
+
+    select::-ms-expand {
+        display: none;
+    }
+
+    input[type="submit"], a {
+        -webkit-appearence: none;
+        background-color: #222c58;
+        border-style: none;
+        border-radius: 5px;
+        margin: 15px auto;
+        color: white;
+        width: 30%;
+        text-decoration: none;
+        text-align: center;
+        font-family: 'nunito sans';
+        font-size: 15px;
+        padding: 10px;
+        display: block;
+        cursor:pointer;
+        transition: all 1s ease;
+    }
+
+    input[type="submit"]:hover, 
+    a:hover {
+        transition: all 0.5s ease;
+        background-color: var(--selected);
+    }
+
+    img {
+        margin: auto;
+        width: 23%;
+        height: auto;
+    }
+/*----------INPUTS ESPECIAIS(end)----------*/
+
+/*========Estilo Mobile==========*/
+@media screen and (max-width: 600px) {
+    main{
+        padding: 15px;
+    }
+
+    img{
+        display: none;
+    }
+
+    section{
+        width: 100%;
+    }
+}

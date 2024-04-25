@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário Online</title>
+    <link rel="stylesheet" href="Design/estilo.css">
+</head>
+<body>
+    <main>
+        <h1>Formulário de dados
+            <p>Informe os campos abaixo para nos enviar suas informações.</p>
+        </h1>
+    
+    <form action="processar.php" method="post">
+        <fieldset>
+            <legend>Informações de Contato</legend>
+            
+            <section>
+                <div class="box-input">
+                    <input type="text" id="nome" name="nome" required>
+                    <label for="nome">Nome Completo: </label>
+                </div>
+                
+
+                <br><br>
+
+                <div class="box-input">
+                    <input type="email" id="email" name="email" required>
+                    <label for="email">Endereço de e-mail: </label>
+                </div>
+                
+        
+                <br><br>
+
+                <div class="box-input">
+                    <input type="tel" id="tel" name="tel" required>
+                    <label for="tel">Número de Telefone: </label>
+                </div>
+            </section>
+
+            <img width="100" height="100" src="Design/Icones/icons8-mensagem-100.png" alt="secured-letter--v1"/>
+        </fieldset>
+
+        <fieldset>
+            <legend>Informações de Endereço</legend>
+
+            <section>
+                <div class="box-input">
+                    <input type="text" id="pais" name="pais" required>
+                    <label for="pais">País:</label>
+                </div>
+                
+                
+                <br><br>
+
+                <div class="box-input">
+                    <input type="text" id="estado" name="estado" required>
+                    <label for="estado">Estado:</label>
+                </div>
+                
+
+                <br><br>
+
+                <div class="box-input">
+                    <input type="text" id="cidade" name="cidade" required>
+                    <label for="cidade">Cidade:</label>
+                </div>
+
+                <br><br>
+
+                <div class="box-input">
+                    <input type="number" id="cep" name="cep" required>
+                    <label for="cep">CEP:</label>
+                </div>
+                
+                <br><br>
+
+                <div class="box-input">
+                    <input type="text" id="bairro" name="bairro" required>
+                    <label for="bairro">Bairro:</label>
+                </div>
+                
+
+                <br><br>
+
+                <div class="box-input">
+                    <input type="text" id="rua" name="rua" required>
+                    <label for="rua">Rua:</label>
+                </div>
+            </section>
+
+            <img width="100" height="100" src="Design/Icones/icons8-marcador-100.png" alt="secured-letter--v1"/>
+        </fieldset>
+        
+        <fieldset>
+            <legend>Informações de Identificação</legend>
+
+            <section>
+                <div class="box-input">
+                    <input type="number" id="rg" name="rg" required>
+                    <label for="rg">RG:</label>
+                </div>
+
+                <br><br>
+
+                <div class="box-input">
+                    <input type="number" id="cpf" name="cpf" required>
+                    <label for="cpf">CPF:</label>
+                </div>
+                
+                <br><br>
+
+                <div class="box-input">
+                    <input type="date" id="nasc" name="nasc" required>
+                    <label for="nasc" class="special">Data de Nascimento:</label>
+                </div>
+
+                <br><br>
+
+                <div class="box-input">
+                <select id="genero" class="form-select" name="genero" required>
+                    <option selected disabled>Selecione</option>
+                    <option value="m">Masculino</option>
+                    <option value="f">Feminino</option>
+                    <option value="o">Outro</option>
+                </select>
+                <label for="genero" class="special">Gênero:</label>
+                </div>
+            </section>
+
+            <img width="100" height="100" src="Design/Icones/icons8-cartão-de-identificação-100.png" alt="secured-letter--v1"/>
+        </fieldset>
+
+        <fieldset>
+            <legend>Informações Profissionais</legend>
+
+            <section>
+                <div class="box-input">
+                    <input type="text" id="cargo" name="cargo" required>
+                    <label for="cargo">Cargo:</label>
+                </div>
+            
+                <br><br>
+
+                <div class="box-input">
+                    <input type="text" id="empresa" name="empresa" required>
+                    <label for="empresa">Empresa:</label>
+                </div>
+
+                <br><br>
+
+                <div class="box-input">
+                    <input type="text" id="setor" name="setor" required>
+                    <label for="setor">Setor de Atuação:</label>
+                </div>
+            </section>
+            <img width="100" height="100" src="Design/Icones/icons8-companhia-100.png" alt="secured-letter--v1"/>
+        </fieldset>
+
+        <input type="submit" value="Enviar Dados">
+        
+    </form>
+
+    <form action="processar.php" method="post">
+        <input type="submit" value="Excluir Dados" name="apagar" style="background-color: brown;">
+    </form>
+
+    <a href="visualizar.php">Visualizar Dados</a>
+    </main>
+</body>
+</html>
