@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
+
+@import url('estilo.css');
+
+main {
+    max-width: 1400px;
+    min-width: 1200px;
+    padding: 20px;
+}
+
+table {
+    border-spacing: 0px;
+    font-family: 'verdana';
+    font-size: 9px;
+}
+
+th {
+    background-color: var(--fundo);
+    color: white;
+}
+
+td, th {
+    border-style: solid;
+    border-width: 0px;
+    border-spacing: 1px;
+    border-color: rgb(207, 207, 207);
+    padding: 10px;
+}
+
+tr:nth-child(even) {
+    background-color: #ececec;
+}
+
+tr:nth-child(odd) {
+    background-color: #fff;
+}
